@@ -28,7 +28,9 @@ STEP BY STEP GUIDE :
 15. RUN YOUR PROJECT AND TEST IT
     
 python manage.py makemigrations
+
 python manage.py migrate
+
 python manage.py runserver
 
 
