@@ -25,9 +25,12 @@ STEP BY STEP GUIDE :
 12. CREATE FOLDER STATIC INSIDE APP , create new file (style.css)
 13. GO TO views.py OF APP (app your code)
 14. GO TO models.py (create your class)
-15. RUN YOUR PROJECT AND TEST IT 
+15. RUN YOUR PROJECT AND TEST IT
+    
 python manage.py makemigrations
+
 python manage.py migrate
+
 python manage.py runserver
 
 
