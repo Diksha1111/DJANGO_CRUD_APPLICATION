@@ -1,0 +1,59 @@
+<html>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <body>
+    <h1 id="a1">Passenger Details</h1><br>
+    <div>
+        <marquee scrollamount=" 11 ">
+        <img
+        src="https://english.janamtv.com/wp-content/uploads/2024/02/train_11.jpg"
+        height="130px"
+        width="325px" />
+        <img
+        src="https://images.livemint.com/img/2023/02/02/600x338/Vande_Metro_1675296807624_1675296807838_1675296807838.jpg"
+        height="130px"
+        width="335px" />
+        <img
+        src="https://static.toiimg.com/thumb/msid-92440904,width-748,height-499,resizemode=4,imgsize-178820/.jpg"
+        height="130px"
+        width="325px" />
+        </marquee>
+        <table id="customers" border=1>
+        
+            <tr>
+                <th> ID </th>
+                <th> NAME </th>
+                <th> AGE </th>
+                <th> NATIONALITY </th>
+                <th> GENDER </th>
+                <th>TRAIN NAME </th>
+                <th>BERTH PREFERENCE </th>
+                <th> CLASS </th>
+                <th> FROM </th>
+                <th> TO </th>
+                <th colspan=2 id="mid">ACTION</th>
+            </tr>
+            {%for x in mem%}
+
+            <tr>
+                <td>{{x.id}} </td>
+                <td>{{x.name}} </td>
+                <td>{{x.age}} </td>
+                <td>{{x.nationality}} </td>
+                <td>{{x.gender}} </td>
+                <td>{{x.trainName}} </td>
+                <td>{{x.berth}} </td>
+                <td>{{x.classs}} </td>
+                <td>{{x.fromm}} </td>
+                <td>{{x.to}} </td>
+                <td> <a href="update/{{x.id}}"><button id="up">UPDATE</button></a></td>
+                <td> <a href="delete/{{x.id}}"><button id="del">DELETE</button></a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        <br>
+        <a href="{%url 'add'%}"><button id="new3">ADD PASSENGER</button></a>
+    </div>
+    <body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <title>Document</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<body>
+    <div class="container2">
+        <h1>UPDATE PASSENGER</h1>
+        <form action="{%url 'uprec' mem.id%}" method="post">
+            {% csrf_token %}
+            <label for="">Name</label><br><br>
+            <input type="text" name="name" value="{{mem.name}}"><br><br>
+            <label for="">Age</label><br><br>
+            <input type="text" name="age" value="{{mem.age}}"><br><br>
+            <label for="">Nationality</label><br><br>
+            <input type="text" name="nationality" value="{{mem.nationality}}"><br><br>
+            <label for="">Gender</label><br><br>
+            <input type="text" name="gender" value="{{mem.gender}}"><br><br>
+            <label for="">Train Name</label><br><br>
+            <input type="text" name="trainName" value="{{mem.trainName}}"><br><br>
+            <label for="">Berth Preference</label><br><br>
+            <input type="text" name="berth" value="{{mem.berth}}"><br><br>
+            <label for="">Class</label><br><br>
+            <input type="text" name="classs" value="{{mem.classs}}"><br><br>
+            <label for="">From</label><br><br>
+            <input type="text" name="fromm" value="{{mem.fromm}}"><br><br>
+            <label for="">To</label><br><br>
+            <input type="text" name="to" value="{{mem.to}}"><br><br>
+
+
+
+
+
+
+
+            <button type="submit" id="new1">UPDATE</button>
+            
+        </form>
+
+    </div>
+</body>
+
+</html>
